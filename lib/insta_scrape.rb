@@ -92,7 +92,8 @@ module InstaScrape
         username = page.first("article header div a")["title"]
         #hi_res_image = page.all("img").last["src"]
         hi_res_image = ""
-        likes = page.find("div section span span")["innerHTML"]
+        #likes = page.find("div section span span")["innerHTML"]
+        likes = ""
         info = InstaScrape::InstagramPost.new(post[:link], post[:image], {
           date: date,
           text: post[:text],
