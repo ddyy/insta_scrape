@@ -87,7 +87,8 @@ module InstaScrape
     posts.each do |post|
       if include_meta_data
         visit(post[:link])
-        date = page.find('time')["datetime"]
+        #date = page.find('time')["datetime"]
+        date = ""
         username = page.first("article header div a")["title"]
         #hi_res_image = page.all("img").last["src"]
         hi_res_image = ""
