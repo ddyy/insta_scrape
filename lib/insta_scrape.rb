@@ -81,7 +81,7 @@ module InstaScrape
         #image: post.find("img")["src"],
         #text: post.find("img")["alt"]}
         image: "",
-        text: ""
+        text: ""}
     end
 
     posts.each do |post|
