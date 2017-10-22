@@ -78,8 +78,10 @@ module InstaScrape
   def self.iterate_through_posts(include_meta_data:)
     posts = all("article div div div a").collect do |post|
       { link: post["href"],
-        image: post.find("img")["src"],
-        text: post.find("img")["alt"]}
+        #image: post.find("img")["src"],
+        #text: post.find("img")["alt"]}
+        image: "",
+        text: ""
     end
 
     posts.each do |post|
